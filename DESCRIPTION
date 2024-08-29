@@ -1,0 +1,12 @@
+Package: cellclockr
+Title: Calculates Information on Epigentic Clock and Immune Cell Associations
+Version: 0.0.0.9000
+Authors@R: 
+    person("Calen", "Patrick", , "cpr2139@cumc.columbia.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "orcid.org/0000-0002-0550-7949"))
+Description: This package is designed to streamline the analysis of associations between epigenetic clocks and immune cell composition across various exposures and contexts. It provides a comprehensive and reproducible pipeline, allowing users to harmonize data products across studies without sharing raw data. The package supports data preparation, model fitting, and output generation, including stratified analyses and visualizations. It is built in R and relies on a minimal set of well-established packages to ensure broad compatibility. Users are guided through setup and execution, with detailed instructions for input data and required configurations. 
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
