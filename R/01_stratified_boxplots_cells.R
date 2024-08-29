@@ -5,7 +5,7 @@
 #' @param data A data frame containing the data with cells and any categorical variables that will be used to create groups for the boxplots.
 #' @param categorical_variables A character vector of categorical variables on which to stratify the data for boxplots. These variables must be present in `data`. Default using `NULL` produces plots data without groupings.
 #' @param id A character string specifying the column name in `data` that contains participant or subject IDs (e.g. "id", "participant", etc.). This argument is required.
-#' @param study A character string specifying the study name, used for naming output files (e.g. "framingham", "whi", etc.). This argument is required.
+#' @param study A character string specifying the study name, used for naming output files (e.g. "framingham", "whi", etc.). This argument is currently required.
 #'
 #' @return A list of ggplot objects containing the generated boxplots for each categorical variable. The function also saves summary data frames as CSV files in the "Cells_Clocks_Output/Tables/" directory.
 #' @export
