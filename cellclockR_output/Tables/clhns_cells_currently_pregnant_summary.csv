@@ -1,0 +1,25 @@
+Cell Type,currently_pregnant,ymin,lower,middle,upper,ymax
+Bas,not_pregnant,0,0,0.3,0.8,2.8
+Bas,pregnant,0,0.4,0.582,0.582,2.4
+Bmem,not_pregnant,0.8,2.1,2.5,3.1,6.3
+Bmem,pregnant,0.7,2.2,2.845,2.845,4
+Bnv,not_pregnant,0,1.7,2.5,3.5,11.8
+Bnv,pregnant,0.1,0.427,0.427,1.6,5.8
+CD4mem,not_pregnant,0.2,5.1,6.5,8.4,17.4
+CD4mem,pregnant,0.5,2.982,2.982,4.3,11.4
+CD4nv,not_pregnant,0,3.1,5,6.7,17.5
+CD4nv,pregnant,0,3.775,4.145,4.145,11.8
+CD8mem,not_pregnant,2.5,8.8,11.5,14.1,26.7
+CD8mem,pregnant,2.9,8.5,9.082,9.082,19.8
+CD8nv,not_pregnant,0,0,1,2.5,10.4
+CD8nv,pregnant,0,1.1,1.373,1.373,5.7
+Eos,not_pregnant,0,1,2.5,4.9,22.6
+Eos,pregnant,0,1.527,1.527,1.527,21.9
+Mono,not_pregnant,0.9,5.9,7,8.2,13.8
+Mono,pregnant,3.5,7.175,10.173,10.173,12.2
+NK,not_pregnant,0.4,3.8,4.9,6.4,16.1
+NK,pregnant,1,1.464,1.464,2.925,8.5
+Treg,not_pregnant,0,0.5,0.9,1.4,3.1
+Treg,pregnant,0,1.2,1.336,1.336,2.6
+Neutrophils,not_pregnant,20.7,42.1,48.1,53.4,78.6
+Neutrophils,pregnant,32,59.675,60.145,60.145,74.3

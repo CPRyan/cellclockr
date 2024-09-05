@@ -9,25 +9,10 @@
 #' @param study A character string specifying the study name, used for naming output files.
 #'
 #' @return A data frame with Delta R2 results and saves the results to a CSV file.
+#' @import tidyverse xfun patchwork broom tibble readr sjlabelled
+#' @importFrom stats lm median na.omit quantile resid
 #' @export
 calculate_cell_clock_delta_r2<- function(cell_clock_df, control_covariates = 1, categorical_variables, study) {
-  # Install and load necessary packages
-  if (!requireNamespace("xfun", quietly = TRUE)) {
-    install.packages("xfun")
-  }
-  if (!requireNamespace("broom", quietly = TRUE)) {
-    install.packages("broom")
-  }
-  if (!requireNamespace("dplyr", quietly = TRUE)) {
-    install.packages("dplyr")
-  }
-  if (!requireNamespace("readr", quietly = TRUE)) {
-    install.packages("readr")
-  }
-  library(broom)
-  library(dplyr)
-  library(readr)
-  library(xfun)
 
   # Create output directory if it does not exist
   output_dir <- "cellclockR_output/Tables/"

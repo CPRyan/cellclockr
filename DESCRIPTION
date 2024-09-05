@@ -7,6 +7,17 @@ Authors@R:
 Description: This package is designed to streamline the analysis of associations between epigenetic clocks and immune cell composition across various exposures and contexts. It provides a comprehensive and reproducible pipeline, allowing users to harmonize data products across studies without sharing raw data. The package supports data preparation, model fitting, and output generation, including stratified analyses and visualizations. It is built in R and relies on a minimal set of well-established packages to ensure broad compatibility. Users are guided through setup and execution, with detailed instructions for input data and required configurations. 
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
+Imports:
+  tidyverse,
+  dplyr,
+  tidyr,
+  xfun,
+  broom,
+  tibble,
+  patchwork,
+  readr, 
+  ggplot2,
+  sjlabelled
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2

@@ -10,18 +10,10 @@
 #' @param study A character string specifying the study name, used for naming output files.
 #'
 #' @return A data frame with results including Beta estimates and confidence intervals.
+#' @import tidyverse xfun patchwork broom tibble readr sjlabelled
+#' @importFrom stats lm median na.omit quantile resid
 #' @export
 calculate_univariate_correlations_stratified <- function(cell_clock_df, control_covariates = 1, categorical_variables, study) {
-
-  # Ensure required libraries are available
-  if (!requireNamespace("broom", quietly = TRUE)) {
-    install.packages("broom")
-  }
-  if (!requireNamespace("dplyr", quietly = TRUE)) {
-    install.packages("dplyr")
-  }
-  library(broom)
-  library(dplyr)
 
   # Define cell and clock columns as in previous functions
   cell_columns <- c("Bas", "Bmem", "Bnv", "CD4mem", "CD4nv", "CD8mem", "CD8nv", "Eos", "Mono", "NK", "Treg", "Neu")

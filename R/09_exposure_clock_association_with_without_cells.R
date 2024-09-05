@@ -9,6 +9,8 @@
 #' @param study A character string for naming the output file.
 #'
 #' @return None (saves results to a CSV file).
+#' @import tidyverse xfun patchwork broom tibble readr sjlabelled
+#' @importFrom stats lm median na.omit quantile resid
 #' @export
 exposure_clock_association_with_without_cells <- function(cell_clock_df, control_covariates = 1, categorical_variables, study) {
   # Define clock and cell columns

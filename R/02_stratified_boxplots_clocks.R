@@ -8,6 +8,8 @@
 #' @param study A character string specifying the study name, used for naming output files (e.g. "framingham", "whi", etc.). This argument is required.
 #'
 #' @return A ggplot object containing the generated boxplots. The function also saves a summary data frame as a CSV file in the "Cells_Clocks_Output/Tables/" directory.
+#' @import tidyverse dplyr tidyr xfun patchwork readr ggplot2 sjlabelled
+#' @importFrom stats lm median na.omit quantile resid
 #' @export
 stratified_boxplots_clocks <- function(data = your_data, id = your_id, study = your_study_name, categorical_variables = NULL) {
 
@@ -18,20 +20,6 @@ stratified_boxplots_clocks <- function(data = your_data, id = your_id, study = y
   if (missing(study) || is.null(study)) {
     stop("Error: Study name required.")
   }
-
-  # Load necessary libraries
-  if (!requireNamespace("xfun", quietly = TRUE)) {
-    install.packages("xfun")
-  }
-  if (!requireNamespace("patchwork", quietly = TRUE)) {
-    install.packages("patchwork")
-  }
-  if (!requireNamespace("ggplot2", quietly = TRUE)) {
-    install.packages("ggplot2")
-  }
-  library(xfun)
-  library(patchwork)
-  library(ggplot2)
 
   # Create necessary directories
   xfun::dir_create("cellclockR_output/Figures")

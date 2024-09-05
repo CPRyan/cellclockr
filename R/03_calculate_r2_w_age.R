@@ -8,25 +8,10 @@
 #' #' @param study A character string specifying the study name, used for naming output files. This argument is required.
 #' @param control_covariates A character vector of covariates to include in the regression models.
 #' @return A table with the basic model R2 (including only Age), the full model R2 (that includes Age and user defined control covariates), and the difference between them (delta-R2). Also includes number of complete observations.
+#' @import tidyverse xfun patchwork broom tibble sjlabelled
+#' @importFrom stats lm median na.omit quantile resid
 #' @export
 calculate_r2_w_age <- function(data = data, study = your_study_name, control_covariates = 1) {
-  # Ensure required libraries are available
-  if (!requireNamespace("xfun", quietly = TRUE)) {
-    install.packages("xfun")
-  }
-  if (!requireNamespace("broom", quietly = TRUE)) {
-    install.packages("broom")
-  }
-  if (!requireNamespace("dplyr", quietly = TRUE)) {
-    install.packages("dplyr")
-  }
-  if (!requireNamespace("tibble", quietly = TRUE)) {
-    install.packages("tibble")
-  }
-  library(xfun)
-  library(broom)
-  library(dplyr)
-  library(tibble)
 
   # Check that "Age" is included in the data
   if (!"Age" %in% colnames(data)) {
@@ -44,18 +29,6 @@ calculate_r2_w_age <- function(data = data, study = your_study_name, control_cov
   clock_columns <- c("PCHorvath1", "PCPhenoAge", "PCGrimAge", "DunedinPACE")
   # All columns
   all_columns <- c(clock_columns, cell_columns)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

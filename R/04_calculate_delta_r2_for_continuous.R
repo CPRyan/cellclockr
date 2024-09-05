@@ -10,25 +10,10 @@
 #' @param study A character string specifying the study name, used for naming output files. This argument is required.
 #'
 #' @return A table with the basic model R2, the full model R2, and the difference between them (delta-R2) for each of the user defined `continuous_variables`. Also includes number of observations.
+#' @import tidyverse xfun patchwork broom tibble sjlabelled
+#' @importFrom stats lm median na.omit quantile resid
 #' @export
 calculate_delta_r2_for_continuous <- function(data = data, study = your_study_name, continuous_variables = your_continuous_variables, control_covariates = 1) {
-  # Ensure required libraries are available
-  if (!requireNamespace("xfun", quietly = TRUE)) {
-    install.packages("xfun")
-  }
-  if (!requireNamespace("broom", quietly = TRUE)) {
-    install.packages("broom")
-  }
-  if (!requireNamespace("dplyr", quietly = TRUE)) {
-    install.packages("dplyr")
-  }
-  if (!requireNamespace("tibble", quietly = TRUE)) {
-    install.packages("tibble")
-  }
-  library(xfun)
-  library(broom)
-  library(dplyr)
-  library(tibble)
 
   # Check that "Age" is included in the data
   if (!"Age" %in% colnames(data)) {

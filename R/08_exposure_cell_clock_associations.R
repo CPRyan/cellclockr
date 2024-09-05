@@ -11,6 +11,8 @@
 #' @param study A character string for naming the output file.
 #'
 #' @return None (saves results to a CSV file).
+#' @import tidyverse xfun patchwork broom tibble readr sjlabelled
+#' @importFrom stats lm median na.omit quantile resid
 #' @export
 exposure_cell_clock_associations <- function(cell_clock_df, control_covariates = 1, categorical_variables, study) {
 
@@ -76,14 +78,6 @@ exposure_cell_clock_associations <- function(cell_clock_df, control_covariates =
   } else {
     cat("\n\nProceeding to calculate exposure clock associations CONTROLLING for technical covariates (e.g. Plate, Array, Batch)\n\n")
   }
-
-
-
-
-
-
-
-
 
 
   # Check if all specified columns are present in the data

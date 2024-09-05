@@ -16,7 +16,7 @@ stratified_boxplots_cells(
 
 \item{id}{A character string specifying the column name in \code{data} that contains participant or subject IDs (e.g. "id", "participant", etc.). This argument is required.}
 
-\item{study}{A character string specifying the study name, used for naming output files (e.g. "framingham", "whi", etc.). This argument is required.}
+\item{study}{A character string specifying the study name, used for naming output files (e.g. "framingham", "whi", etc.). This argument is currently required.}
 
 \item{categorical_variables}{A character vector of categorical variables on which to stratify the data for boxplots. These variables must be present in \code{data}. Default using \code{NULL} produces plots data without groupings.}
 }
