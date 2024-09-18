@@ -1,9 +1,0 @@
-Clock Type,currently_pregnant,ymin,lower,middle,upper,ymax
-PCGrimAge,not_pregnant,34.091,38.986,40.191,41.497,47.645
-PCGrimAge,pregnant,36.839,43.031,43.031,43.031,46.646
-PCHorvath1,not_pregnant,22.592,29.571,31.522,33.634,42.008
-PCHorvath1,pregnant,25.437,32.568,35.866,35.866,39.538
-PCPhenoAge,not_pregnant,11.343,23,26.094,29.186,38.921
-PCPhenoAge,pregnant,19.075,31.135,33.691,33.691,40.084
-DunedinPACE,not_pregnant,0.717,0.961,1.027,1.097,1.415
-DunedinPACE,pregnant,0.866,1.174,1.174,1.174,1.402
