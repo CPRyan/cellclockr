@@ -84,37 +84,34 @@ create_output_directories_calculate_r2_w_age <- function(output_dir = NULL, save
 
 # Calculate and append Results
 append_results_calculate_r2_w_age <- function(results_df, data, all_columns, key_var, age_column, control_covariates, all_clocks) {
+    
+  # Fit basic model, collect adj r2
+  basic_age_model_formula <- reformulate(
+    termlabels=c(age_column),
+    response = c(key_var)
+  )
+  basic_age_model <- lm(basic_age_model_formula, data=data)
+  basic_age_model_r2 <- glance(basic_age_model)$adj.r.squared
   
-  # For each of the cell and clock outcomes
-  for (key_var in all_columns) {
-    
-    # Fit basic model, collect adj r2
-    basic_age_model_formula <- reformulate(
-      termlabels=c(age_column),
-      response = c(key_var)
-    )
-    basic_age_model <- lm(basic_age_model_formula, data=data)
-    basic_age_model_r2 <- glance(basic_age_model)$adj.r.squared
-    
-    # Fit full model, collect adj r2
-    full_model_formula <- reformulate(
-      termlabels=c(age_column, control_covariates),
-      response = c(key_var)
-    )
-    full_model <- lm(full_model_formula, data=data)
-    full_model_r2 <- glance(full_model)$adj.r.squared
-    nobs <- glance(full_model)$nobs
-    
-    # Append Results
-    results_df <- dplyr::bind_rows(results_df, data.frame(Cell_or_Clock_Outcome = key_var,
-                                                          R2_with_age = basic_age_model_r2,
-                                                          R2_w_age_and_control_covariates = full_model_r2,
-                                                          Delta_R2 = full_model_r2 - basic_age_model_r2,
-                                                          n_obs = nobs,
-                                                          Is_Clock = key_var %in% all_clocks) %>%
-                                     mutate(across(where(is.numeric), round, 3))
-    )
-  }
+  # Fit full model, collect adj r2
+  full_model_formula <- reformulate(
+    termlabels=c(age_column, control_covariates),
+    response = c(key_var)
+  )
+  full_model <- lm(full_model_formula, data=data)
+  full_model_r2 <- glance(full_model)$adj.r.squared
+  nobs <- glance(full_model)$nobs
+  
+  # Append Results
+  results_df <- dplyr::bind_rows(results_df, data.frame(Cell_or_Clock_Outcome = key_var,
+                                                        R2_with_age = basic_age_model_r2,
+                                                        R2_w_age_and_control_covariates = full_model_r2,
+                                                        Delta_R2 = full_model_r2 - basic_age_model_r2,
+                                                        n_obs = nobs,
+                                                        Is_Clock = key_var %in% all_clocks) %>%
+                                   mutate(across(where(is.numeric), round, 3))
+  )
+
   return(results_df)
 }
 
