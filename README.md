@@ -1,26 +1,3 @@
-<style>
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 20px 0;
-  }
-  th, td {
-    border: 1px solid #ddd; /* Thin line between columns */
-    padding: 12px 15px; /* Cell padding */
-    text-align: left; /* Align text to the left */
-  }
-  th {
-    border-bottom: 3px solid #333; /* Thick line under the heading */
-    background-color: #f2f2f2; /* Light grey background for the heading */
-  }
-  tr:nth-child(even) {
-    background-color: #f9f9f9; /* Alternating row colors */
-  }
-  tr:hover {
-    background-color: #e1e1e1; /* Highlight on hover */
-  }
-</style>
-
 # cellclockr
 
 ##### Calen Ryan, Will Marella
