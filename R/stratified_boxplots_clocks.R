@@ -10,7 +10,8 @@
 #' @param all_clocks A character vector of column names present in `data` that contain the clock data.
 #' @param highlighted_clock_types A character vector of clocks to be highlighted
 #' with an adjusted y-axis scale. Must be a subset of `all_clocks`. Default is NULL
-#' where no clocks are highlighted.
+#' where no clocks are highlighted. Typically, DunedinPACE is highlighted due to
+#' its distinct scale as compared to epigenetic clock measures.
 #' @param categorical_variables A character vector of categorical variables for
 #' stratification. These must be present in `data`. Default using `NULL` produces 
 #' data without groupings.

@@ -14,7 +14,8 @@
 #' @param all_clocks A character vector of column names in `data` that contain clock measurements.
 #' @param continuous_variables A character vector of column names in `data` representing
 #'   the continuous variables to be analyzed.
-#' @param control_covariates A character vector of column names in `data` to be used as control covariates.
+#' @param control_covariates A character vector of column names in `data` to use as 
+#' additional control covariates (Batch, Array, Plate, Row, Column etc.) in the regression models.
 #' @param age_column A character string specifying the name of the age column in `data`.
 #' @param output_dir A character string specifying the output directory. If `NULL`, the current
 #'   working directory is used. Default is `NULL.`

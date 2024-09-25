@@ -10,7 +10,8 @@
 #' @param cell_types A character vector of column names present in `data` that contain the cell type data.
 #' @param highlighted_cell_types A character vector of cell types to be highlighted
 #' with an adjusted y-axis scale. Must be a subset of `cell_types`. Default is NULL
-#' where no cell types are highlighted.
+#' where no cell types are highlighted. Neutrophil cell counts are typically highlighted 
+#' as they greatly exceed those of other cell types.
 #' @param categorical_variables A character vector of categorical variables for
 #' stratification. These must be present in `data`. Default using `NULL` produces 
 #' data without groupings.

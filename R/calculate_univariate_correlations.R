@@ -13,8 +13,8 @@
 #' @param age_column A character string specifying the name of the age column in `data`.
 #' @param stratify_by A character vector of column names in `data` to use for stratification.
 #'   Default is NULL (no stratification).
-#' @param control_covariates A character vector of column names in `data` to use as control
-#'   covariates in the regression models. Default is NULL (no control covariates).
+#' @param control_covariates A character vector of column names in `data` to use as additional control
+#'   covariates (Batch, Array, Plate, Row, Column etc.) in the regression models. Default is `NULL` (no additional control covariates).
 #' @param output_dir A character string specifying the output directory. If NULL, the current
 #'   working directory is used. Default is NULL.
 #' @param save_results Logical; if TRUE, results are saved as a CSV file. Default is FALSE.

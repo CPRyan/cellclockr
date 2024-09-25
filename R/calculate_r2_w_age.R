@@ -10,7 +10,8 @@
 #' @param cell_types A character vector of column names in `data` that contain cell type estimates. 
 #' @param all_clocks A character vector of column names in `data` that contain clock estimates.
 #' @param age_column A character string specifying the name of the age column in `data`. 
-#' @param control_covariates A character vector of column names in `data` to be used as control covariates. 
+#' @param control_covariates A character vector of column names in `data` to use as 
+#' additional control covariates (Batch, Array, Plate, Row, Column etc.) in the regression models.
 #' @param output_dir A character string specifying the output directory. If `NULL`, the current 
 #' working directory is used. Default is `NULL.` 
 #' @param save_results Logical; if TRUE, results are saved as a CSV file. Default is FALSE.
