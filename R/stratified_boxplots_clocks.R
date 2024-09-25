@@ -8,7 +8,7 @@
 #' @param id A string specifying the column name for participant/subject IDs.
 #' @param study A string specifying the study name, used for naming output files.
 #' @param all_clocks A character vector of column names present in `data` that contain the clock data.
-#' @param highlighted_clock_types A character vector of clocks to be highlighted
+#' @param highlighted_clocks A character vector of clocks to be highlighted
 #' with an adjusted y-axis scale. Must be a subset of `all_clocks`. Default is NULL
 #' where no clocks are highlighted. Typically, DunedinPACE is highlighted due to
 #' its distinct scale as compared to epigenetic clock measures.
