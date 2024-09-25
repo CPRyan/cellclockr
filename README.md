@@ -1,6 +1,6 @@
 # cellclockr
 
-##### Calen Ryan, Will Marella
+##### Calen Ryan, PhD and Will Marella, MPhil
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -72,7 +72,7 @@ Please ensure these packages are installed prior to analysis.
 
 The analysis in the package requires a dataframe containing columns with the following information:
 
-- Epigenetic clock measures (e.g. Horvath, PhenoAge, DunedinPACE, etc.)
+- Epigenetic clock measures (e.g. Horvath, PCPhenoAge, DunedinPACE, etc.)
 - Estimated cell composition measures (e.g. Bcell, CD4Tnaive, etc.)
 - Chronological age (optional, but used in most functions)
 - (Optional) Groups of interest with one or more categories (e.g. sex, self-reported ethnicity, disease status, etc.)
@@ -157,7 +157,7 @@ You may set only one of `save_summaries` and `save_plots` to `TRUE` if you are o
 ### calculate_r2_w_age
 
 This function calculates R-squared values for the relationship between age and 
-various cell type and clock measures, both with and without control covariates. 
+various cell type and clock measures, both with and without control covariates (Batch, Array, Plate, Row, Column etc.). 
 It produces a table with the R2 values for a basic model (age only), a full model 
 (age plus control covariates), and the difference between them (delta-R2).
 
@@ -191,7 +191,7 @@ If `save_results = TRUE`, a table will be saved in the specified `output_dir` in
 
 ### calculate_delta_r2_for_continuous
 
-This function calculates R-squared values for the relationship between user-defined control_covariates and age-adjusted cell type and clock measures, both with and without the additional of user-defined continuous_variables. It produces a table with the R2 values for a basic model (control_covariates only), a full model (control_covariates plus continuous_variables), and the difference between them (delta-R2).
+This function calculates R-squared values for the relationship between user-defined control_covariates (Batch, Array, Plate, Row, Column etc.) and age-adjusted cell type and clock measures, both with and without the additional of user-defined continuous_variables. It produces a table with the R2 values for a basic model (control_covariates only), a full model (control_covariates plus continuous_variables), and the difference between them (delta-R2).
 
 Usage:
 
@@ -225,7 +225,7 @@ In this instance, the continuous variables of interest were "BMI" and "SES".
 
 ### calculate_univariate_correlations
 
-This function performs regressions with each clock variable against each cell variable, including specified control covariates and optionally stratified by the levels of specified categorical variables. It calculates the beta coefficients and Wald confidence intervals for each correlation.
+This function performs regressions with each clock variable against each cell variable, including specified control covariates (e.g. Batch, Array, Plate, Row, Column etc.) and optionally stratified by the levels of specified categorical variables. It calculates the beta coefficients and Wald confidence intervals for each correlation.
 
 Usage:
 ```r
@@ -259,7 +259,7 @@ In this instance, the categorical variable provided in `stratify_by` was "Sex".
 
 ### calculate_cell_clock_delta_r2
 
-This function calculates the change in R-squared (delta R2) when adding cell types to models predicting age-adjusted clock measures. It can stratify results by categorical variables and control for specified covariates.
+This function calculates the change in R-squared (delta R2) when adding cell types to models predicting age-adjusted clock measures. It can stratify results by categorical variables and control for specified control_covariates (Batch, Array, Plate, Row, Column etc.).
 
 Usage:
 ```r
@@ -292,7 +292,7 @@ In this case, the first categorical variable provided in `stratify_by` was "Educ
 
 ### exposure_cell_clock_associations
 
-This function calculates associations between categorical exposures and age-adjusted cell types or clock measures, optionally controlling for covariates. The output provides the beta coefficients and Wald confidence intervals.
+This function calculates associations between categorical exposures and age-adjusted cell types or clock measures, optionally controlling for control covariates (Batch, Array, Plate, Row, Column etc.). The output provides the beta coefficients and Wald confidence intervals.
 
 Usage:
 ```r
@@ -325,7 +325,7 @@ In this case, the exposure provided in `categorical_variables` provided was "Smo
 
 ### exposure_clock_association_with_without_cells
 
-This function calculates associations between categorical exposures and age-adjusted clock measures, both with and without adjusting for cell types. It optionally controls for additional covariates. The output provides the beta coefficients and Wald confidence intervals.
+This function calculates associations between categorical exposures and age-adjusted clock measures, both with and without adjusting for cell types. It optionally controls for additional control covariates (e.g. Batch, Array, Plate, Row, Column etc.). The output provides the beta coefficients and Wald confidence intervals.
 
 Usage:
 
