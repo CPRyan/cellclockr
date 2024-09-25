@@ -26,7 +26,8 @@ calculate_r2_w_age(
 
 \item{age_column}{A character string specifying the name of the age column in \code{data}.}
 
-\item{control_covariates}{A character vector of column names in \code{data} to be used as control covariates.}
+\item{control_covariates}{A character vector of column names in \code{data} to use as
+additional control covariates (Batch, Array, Plate, Row, Column etc.) in the regression models.}
 
 \item{output_dir}{A character string specifying the output directory. If \code{NULL}, the current
 working directory is used. Default is \code{NULL.}}

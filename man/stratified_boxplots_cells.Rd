@@ -28,7 +28,8 @@ stratified_boxplots_cells(
 
 \item{highlighted_cell_types}{A character vector of cell types to be highlighted
 with an adjusted y-axis scale. Must be a subset of \code{cell_types}. Default is NULL
-where no cell types are highlighted.}
+where no cell types are highlighted. Neutrophil cell counts are typically highlighted
+as they greatly exceed those of other cell types.}
 
 \item{categorical_variables}{A character vector of categorical variables for
 stratification. These must be present in \code{data}. Default using \code{NULL} produces

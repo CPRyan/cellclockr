@@ -31,8 +31,8 @@ variables (exposures), and optional control covariates.}
 \item{categorical_variables}{A character vector of column names in \code{data} representing
 the categorical variables (exposures) to be analyzed.}
 
-\item{control_covariates}{A character vector of column names in \code{data} to use as control
-covariates in the regression models. Default is \code{NULL} (no control covariates).}
+\item{control_covariates}{A character vector of column names in \code{data} to use as additional control
+covariates (Batch, Array, Plate, Row, Column etc.) in the regression models. Default is \code{NULL} (no additional control covariates).}
 
 \item{output_dir}{A character string specifying the output directory. If \code{NULL}, the current
 working directory is used. Default is \code{NULL.}}

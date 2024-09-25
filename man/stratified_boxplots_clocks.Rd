@@ -26,6 +26,11 @@ stratified_boxplots_clocks(
 
 \item{all_clocks}{A character vector of column names present in \code{data} that contain the clock data.}
 
+\item{highlighted_clocks}{A character vector of clocks to be highlighted
+with an adjusted y-axis scale. Must be a subset of \code{all_clocks}. Default is NULL
+where no clocks are highlighted. Typically, DunedinPACE is highlighted due to
+its distinct scale as compared to epigenetic clock measures.}
+
 \item{categorical_variables}{A character vector of categorical variables for
 stratification. These must be present in \code{data}. Default using \code{NULL} produces
 data without groupings.}
@@ -40,10 +45,6 @@ working directory is used.}
 \item{save_plots}{Logical; if TRUE, plots are saved in 'cellclockR_output/Plots/'.}
 
 \item{save_summaries}{Logical; if TRUE, summaries are saved in 'cellclockR_output/Summaries/'.}
-
-\item{highlighted_clock_types}{A character vector of clocks to be highlighted
-with an adjusted y-axis scale. Must be a subset of \code{all_clocks}. Default is NULL
-where no clocks are highlighted.}
 }
 \value{
 A list containing the ggplot objects and summary data frames for each categorical variable.
@@ -60,7 +61,7 @@ result <- stratified_boxplots_clocks(
   id = "participant_id",
   study = "my_study",
   all_clocks = c("DunedinPACE", "PCPhenoAge", "PCGrimAge"),
-  highlighted_cell_types = c("DunedinPACE")
+  highlighted_clocks = c("DunedinPACE")
   categorical_variables = c("Sex", "AgeGroup"),
   save_plots = TRUE,
   save_summaries = TRUE

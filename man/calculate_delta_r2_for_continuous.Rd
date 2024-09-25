@@ -29,7 +29,8 @@ and control covariates.}
 \item{continuous_variables}{A character vector of column names in \code{data} representing
 the continuous variables to be analyzed.}
 
-\item{control_covariates}{A character vector of column names in \code{data} to be used as control covariates.}
+\item{control_covariates}{A character vector of column names in \code{data} to use as
+additional control covariates (Batch, Array, Plate, Row, Column etc.) in the regression models.}
 
 \item{age_column}{A character string specifying the name of the age column in \code{data}.}
 
